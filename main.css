@@ -60,9 +60,13 @@ h2, p {
     padding: 10px;
 }
 
-#results {
+.results {
     display: none;
     padding: 10px;
+}
+
+.results-show {
+    display: block;
 }
 
 
