@@ -22,9 +22,13 @@ $(document).ready(function () { //on DOM ready, bind clicks
 	function runMath() {
 		sum = num1 + num2;
 		product = num1 * num2;
-		difference = num1 - num2;
+		difference = num2 - num1;
 		quotient = num1 / num2;
 		console.log(sum, product, difference, quotient)
+	}
+
+	function showIt() {
+
 	}
 
 });
