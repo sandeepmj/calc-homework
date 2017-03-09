@@ -69,6 +69,10 @@ h2, p {
     display: block;
 }
 
+.highlight {
+    background-color: yellow;
+}
+
 
 /* Tablet/Desktop overrides */
 
