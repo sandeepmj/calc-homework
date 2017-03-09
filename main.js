@@ -25,17 +25,19 @@ $(document).ready(function () { //on DOM ready, bind clicks
 		product = num1 * num2;
 		difference = num2 - num1;
 		quotient = num1 / num2;
+		rounded = quotient.toFixed(2) //.toFixed(x) where x is the number of decimal places you want.
 		console.log(sum, product, difference, quotient)
 	}
 
 	function showIt() {
-		$(".first-number").text(num1);
-		$(".second-number").text(num2)
-		$("#show-sum").text(sum);
-		$("#show-difference").text(difference);
-		$("#show-product").text(product);
-		$("#show-quotient").text(quotient);
-		$('#final-results').addClass('results-show');
+		$(".first-number").text(num1); // plugs number 1 in text
+		$(".second-number").text(num2) // plugs number 2 in text
+		$("#show-sum").text(sum); // plugs sum into text
+		$("#show-difference").text(difference); // plugs difference into text
+		$("#show-product").text(product); // plugs product into text
+		$("#show-quotient").text(quotient); // plugs quotient into text
+		$("#show-rounded").text(rounded); // plugs sounded quotient into text
+		$('#final-results').addClass('results-show'); //shows the hidden class
 
 	}
 
