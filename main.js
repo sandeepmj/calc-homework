@@ -16,6 +16,7 @@ $(document).ready(function () { //on DOM ready, bind clicks
 
 		console.log(num1, num2);
 		runMath();
+		showIt();
 	}); // close get value of input fields
 
 	//function to add, subtract, divide and multiply
@@ -28,6 +29,13 @@ $(document).ready(function () { //on DOM ready, bind clicks
 	}
 
 	function showIt() {
+		$(".first-number").text(num1);
+		$(".second-number").text(num2)
+		$("#show-sum").text(sum);
+		$("#show-difference").text(difference);
+		$("#show-product").text(product);
+		$("#show-quotient").text(quotient);
+		$('#final-results').addClass('results-show');
 
 	}
 
