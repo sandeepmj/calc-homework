@@ -1,8 +1,10 @@
-//first declare counters for totals
-var sum = 0,
-	difference = 0,
+// //first declare counters for totals
+// var sum = 0,
+difference = 0,
 	product = 0,
 	quotient = 0;
+
+
 
 $(document).ready(function () { //on DOM ready, bind clicks
 	//get value of input fields
@@ -15,19 +17,48 @@ $(document).ready(function () { //on DOM ready, bind clicks
 		num2 = parseFloat($("#number2").val()); //store the number of input 2
 
 		console.log(num1, num2);
-		runMath();
+
+		// return function to add it:
+		function addIt(a, b) {
+			return a + b;
+		};
+
+		sum = addIt(num1, num2);
+		console.log(sum);
+
+		// return function to subtract it
+
+		function subIt(a, b) {
+			return b - a;
+		};
+
+		difference = subIt(num1, num2);
+		console.log(difference);
+
+		//return function to multipy it
+
+		function multiplyIt(a, b) {
+			return a * b;
+		};
+
+		product = multiplyIt(num1, num2);
+		console.log(product);
+
+		////return function to divite it
+
+		function divideIt(a, b) {
+			return a / b;
+		};
+
+		quotient = divideIt(num1, num2);
+		rounded = quotient.toFixed(2) //.toFixed(x) where x is the number of decimal places you want.
+		console.log(quotient);
+
+
+		//run showIt function
 		showIt();
 	}); // close get value of input fields
 
-	//function to add, subtract, divide and multiply
-	function runMath() {
-		sum = num1 + num2;
-		product = num1 * num2;
-		difference = num2 - num1;
-		quotient = num1 / num2;
-		rounded = quotient.toFixed(2) //.toFixed(x) where x is the number of decimal places you want.
-		console.log(sum, product, difference, quotient)
-	}
 
 	function showIt() {
 		$(".first-number").text(num1); // plugs number 1 in text
