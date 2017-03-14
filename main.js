@@ -1,8 +1,10 @@
 // //first declare counters for totals
-// var sum = 0,
-difference = 0,
-	product = 0,
-	quotient = 0;
+var sum,
+	difference,
+	product,
+	quotient,
+	num1,
+	num2;
 
 
 
@@ -18,44 +20,24 @@ $(document).ready(function () { //on DOM ready, bind clicks
 
 		console.log(num1, num2);
 
-		// return function to add it:
-		function addIt(a, b) {
-			return a + b;
-		};
-
+		//call addIt function from below to get sum
 		sum = addIt(num1, num2);
 		console.log(sum);
 
-		// return function to subtract it
-
-		function subIt(a, b) {
-			return b - a;
-		};
-
+		//call subIt function from below to subtract
 		difference = subIt(num1, num2);
 		console.log(difference);
 
-		//return function to multipy it
-
-		function multiplyIt(a, b) {
-			return a * b;
-		};
-
+		//call multiplyIt function from below to multiply
 		product = multiplyIt(num1, num2);
 		console.log(product);
 
-		////return function to divite it
-
-		function divideIt(a, b) {
-			return a / b;
-		};
-
+		//call divideIt function from below to divide
 		quotient = divideIt(num1, num2);
 		rounded = quotient.toFixed(2) //.toFixed(x) where x is the number of decimal places you want.
 		console.log(quotient);
 
-
-		//run showIt function
+		//run showIt function to populate fields
 		showIt();
 	}); // close get value of input fields
 
@@ -73,3 +55,25 @@ $(document).ready(function () { //on DOM ready, bind clicks
 	}
 
 });
+
+// return function to add it:
+function addIt(a, b) {
+	return a + b;
+};
+
+
+// return function to subtract it
+function subIt(a, b) {
+	return b - a;
+};
+
+
+//return function to multipy it
+function multiplyIt(a, b) {
+	return a * b;
+};
+
+////return function to divite it
+function divideIt(a, b) {
+	return a / b;
+};
