@@ -1,8 +1,11 @@
-//first declare counters for totals
-var sum = 0,
-	difference = 0,
-	product = 0,
-	quotient = 0;
+//declare variables
+var sum,
+	difference,
+	product,
+	quotient,
+	rounded,
+	num1,
+	num2;
 
 $(document).ready(function () { //on DOM ready, bind clicks
 	//get value of input fields
@@ -15,30 +18,29 @@ $(document).ready(function () { //on DOM ready, bind clicks
 		num2 = parseFloat($("#number2").val()); //store the number of input 2
 
 		console.log(num1, num2);
-		runMath();
-		showIt();
+		runMath(); //call runMath function
+		showIt(); //call the showIt function
 	}); // close get value of input fields
+}); // close document ready
 
-	//function to add, subtract, divide and multiply
-	function runMath() {
-		sum = num1 + num2;
-		product = num1 * num2;
-		difference = num2 - num1;
-		quotient = num1 / num2;
-		rounded = quotient.toFixed(2) //.toFixed(x) where x is the number of decimal places you want.
-		console.log(sum, product, difference, quotient)
-	}
+//function to add, subtract, divide and multiply
+function runMath() {
+	sum = num1 + num2;
+	product = num1 * num2;
+	difference = num2 - num1;
+	quotient = num1 / num2;
+	rounded = quotient.toFixed(2) //.toFixed(x) where x is the number of decimal places you want.
+	console.log(sum, product, difference, quotient)
+}; //close runMath()
 
-	function showIt() {
-		$(".first-number").text(num1); // plugs number 1 in text
-		$(".second-number").text(num2) // plugs number 2 in text
-		$("#show-sum").text(sum); // plugs sum into text
-		$("#show-difference").text(difference); // plugs difference into text
-		$("#show-product").text(product); // plugs product into text
-		$("#show-quotient").text(quotient); // plugs quotient into text
-		$("#show-rounded").text(rounded); // plugs sounded quotient into text
-		$('#final-results').addClass('results-show'); //shows the hidden class
+function showIt() {
+	$(".first-number").text(num1); // plugs number 1 in text
+	$(".second-number").text(num2) // plugs number 2 in text
+	$("#show-sum").text(sum); // plugs sum into text
+	$("#show-difference").text(difference); // plugs difference into text
+	$("#show-product").text(product); // plugs product into text
+	$("#show-quotient").text(quotient); // plugs quotient into text
+	$("#show-rounded").text(rounded); // plugs sounded quotient into text
+	$('#final-results').addClass('results-show'); //shows the hidden class
 
-	}
-
-});
+}; //close showIt()
