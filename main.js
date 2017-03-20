@@ -7,7 +7,7 @@ rounded,
 num1,
 num2;
 
-$(document).ready(function { //on DOM ready, bind clicks
+(document).ready(function () { //on DOM ready, bind clicks
 	//get value of input fields
 	$("#mathIt").on("click", function (e) {
 		e.preventDefault(); //disable the button's default behavior
@@ -18,7 +18,7 @@ $(document).ready(function { //on DOM ready, bind clicks
 		num2 = parseFloat($("#number2").val()); //store the number of input 2
 
 		console.log(num1, num2);
-		runMath(); //call runMath function
+		runMath; //call runMath function
 		showIt(); //call the showIt function
 	}); // close get value of input fields
 }); // close document ready
