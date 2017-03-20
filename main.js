@@ -1,13 +1,13 @@
 //declare variables
-var sum,
-	difference,
-	product,
-	quotient,
-	rounded,
-	num1,
-	num2;
+sum,
+difference,
+product,
+quotient,
+rounded,
+num1,
+num2;
 
-$(document).ready(function () { //on DOM ready, bind clicks
+$(document).ready(function { //on DOM ready, bind clicks
 	//get value of input fields
 	$("#mathIt").on("click", function (e) {
 		e.preventDefault(); //disable the button's default behavior
@@ -34,7 +34,7 @@ function runMath() {
 }; //close runMath()
 
 function showIt() {
-	$(".first-number").text(num1); // plugs number 1 in text
+	$(".first-number").text(nm1); // plugs number 1 in text
 	$(".second-number").text(num2) // plugs number 2 in text
 	$("#show-sum").text(sum); // plugs sum into text
 	$("#show-difference").text(difference); // plugs difference into text
@@ -43,4 +43,4 @@ function showIt() {
 	$("#show-rounded").text(rounded); // plugs sounded quotient into text
 	$('#final-results').addClass('results-show'); //shows the hidden class
 
-}; //close showIt()
+	; //close showIt()
