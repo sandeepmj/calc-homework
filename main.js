@@ -9,7 +9,7 @@ num2;
 
 (document).ready(function () { //on DOM ready, bind clicks
 	//get value of input fields
-	$("#mathIt").on("click", function (e) {
+	$(".mathIt").on("click", function (e) {
 		e.preventDefault(); //disable the button's default behavior
 
 		// getNumber1 = $("#number1"),
@@ -17,7 +17,7 @@ num2;
 		num1 = parseFloat($("#number1").val()); //store the number of input 1
 		num2 = parseFloat($("#number2").val()); //store the number of input 2
 
-		console.log(num1, num2);
+		// console.log(num1, num2);
 		runMath; //call runMath function
 		showIt(); //call the showIt function
 	}); // close get value of input fields
