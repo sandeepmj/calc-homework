@@ -14,8 +14,8 @@ num2;
 
 		// getNumber1 = $("#number1"),
 		// num1 = parseFloat(getNumber1.val()); //store the number of input 1
-		num1 = parseFloat($("#number1").val()); //store the number of input 1
-		num2 = parseFloat($("#number2").val()); //store the number of input 2
+		num1 = parseInt($("#number1").val()); //store the number of input 1
+		num2 = parseInt($("#number2").val()); //store the number of input 2
 
 		// console.log(num1, num2);
 		runMath; //call runMath function
@@ -41,6 +41,6 @@ function showIt() {
 	$("#show-product").text(product); // plugs product into text
 	$("#show-quotient").text(quotient); // plugs quotient into text
 	$("#show-rounded").text(rounded); // plugs sounded quotient into text
-	$('#final-results').addClass('results-show'); //shows the hidden class
+	$('#final-results').adClass('results-show'); //shows the hidden class
 
 	; //close showIt()
